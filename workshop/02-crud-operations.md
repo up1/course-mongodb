@@ -38,6 +38,7 @@ $db.products.find().toArray()
 ```
 
 ### Find data
+* [Query and Projection Operators](https://docs.mongodb.com/manual/reference/operator/query/)
 
 Find by id
 ```
@@ -45,8 +46,18 @@ $db.products.findOne({_id:ObjectId("619b6592ce950edda06355d6")})
 $db.products.find({_id:ObjectId("619b6592ce950edda06355d6")})
 ```
 
-Working with filter + comparison operators
+Find by name
 ```
+$db.products.find({name:"target"})
+```
+
+Working with filter + [comparison operators](https://docs.mongodb.com/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison)
+```
+$db.products.find( { "price": { $gt: 50 } } )
+
+$db.products.find( { price: { $ne: 100, $exists: true } } )
+
+$db.products.find( { "price": { $in: [ 100, 200 ] } } )
 ```
 
 ### Update data
