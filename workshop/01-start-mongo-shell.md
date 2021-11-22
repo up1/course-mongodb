@@ -39,6 +39,7 @@ $db.products.insertOne({name:"paper",price:10, description:"A4 size papers"})
 
 ### Read data => Find all
 ```
+$db.products.count()
 $db.products.find()
 $db.products.find().pretty()
 ```
