@@ -1,7 +1,16 @@
 ## [Indexing](https://docs.mongodb.com/manual/indexes/)
-* Signle field indexes
-* Index sorting
+* Query criteria
+* Sort order
+
+Default index is `_id` field
+## Types of indexes
+* Single field indexes
 * Compound indexes
+* Multikey indexes => For array
+* Geospatial indexes => Geo location
+* Text indexes => For search
+* Wildcard indexes
+* Hashed indexes
 
 ### Explain query
 ```
@@ -87,13 +96,18 @@ Result
 }
 ```
 
-### Signle field indexes
+### Single field indexes
 
 Create index
 ```
 db.products.createIndex({ <field>: <direction> })
+```
+Directions values
+* 1 = ascending
+* -1 = descending
 
-
+Example
+```
 db.products.createIndex({ name: 1 })
 
 db.products.createIndex({ name: 1 }, { name: "first index" })
@@ -152,12 +166,25 @@ Remove all indexes
 db.products.dropIndexes()
 ```
 
-### Index sorting
-
-```
-```
-
 ### Compound indexes
 
 ```
+db.products.createIndex({ name: 1, price: -1j })
 ```
+
+### wildcard indexes
+
+Example
+```
+db.userData.createIndex( { "data.$**" : 1 } )
+```
+
+Support queries
+```
+db.userData.find({ "data.likes" : "dogs" })
+db.userData.find({ "data.dislikes" : "pickles" })
+db.userData.find({ "data.age" : { $gt : 30 } })
+db.userData.find({ "data" : "inactive" })
+```
+
+### [Indexes Strategies](https://docs.mongodb.com/manual/applications/indexes/)
