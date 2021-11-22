@@ -10,6 +10,8 @@ Implicit session: session { "id" : UUID("2ff72cc6-12cc-4dab-a320-e95fc939ee1f") 
 MongoDB server version: 5.0.4
 ```
 
+Note :: [Connection string of MongoDB](https://docs.mongodb.com/manual/reference/connection-string/#connections-dns-seedlist)
+
 ### List all databases
 ```
 $show dbs

@@ -1,0 +1,64 @@
+[
+    {
+       "country": "Thailand",
+       "city": "Bangkok",
+       "name": "CU",
+       "location": {
+          "type": "Point",
+          "coordinates": [
+             -5.672251,
+             17,
+             40.96078
+          ]
+       },
+       "students": [
+          {
+             "year": 2018,
+             "number": 24774
+          },
+          {
+             "year": 2019,
+             "number": 23166
+          },
+          {
+             "year": 2020,
+             "number": 21913
+          },
+          {
+             "year": 2021,
+             "number": 21715
+          }
+       ]
+    },
+    {
+       "country": "Thailand",
+       "city": "Bangkok",
+       "name": "KU",
+       "location": {
+          "type": "Point",
+          "coordinates": [
+             -5.669119,
+             17,
+             40.963173
+          ]
+       },
+       "students": [
+          {
+             "year": 2018,
+             "number": 4788
+          },
+          {
+             "year": 2019,
+             "number": 4821
+          },
+          {
+             "year": 2020,
+             "number": 6550
+          },
+          {
+             "year": 2021,
+             "number": 6125
+          }
+       ]
+    }
+ ]
