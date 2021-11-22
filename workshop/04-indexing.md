@@ -1,6 +1,8 @@
 ## [Indexing](https://docs.mongodb.com/manual/indexes/)
 * Query criteria
 * Sort order
+  * 1 = ascending
+  * -1 = descending
 
 Default index is `_id` field
 ## Types of indexes
@@ -193,3 +195,94 @@ db.userData.find({ "data" : "inactive" })
 ### Working with sorting data
 * Default :: sorting data in memory
 * Improve sorting data with indexes
+
+Import data
+```
+$mongoimport --db perf --collection persons --file persons.json --jsonArray
+```
+
+Check amount of data = 5,000
+```
+$mongo
+$use perf
+$db.persons.count()
+```
+
+Query sample data
+```
+$db.persons.findOne()
+
+{
+	"_id" : ObjectId("619bd1d47793a5e2dbf00937"),
+	"gender" : "male",
+	"name" : {
+		"title" : "mr",
+		"first" : "elijah",
+		"last" : "lewis"
+	},
+	"location" : {
+		"street" : "2623 paddock way",
+		"city" : "virginia beach",
+		"state" : "wyoming",
+		"postcode" : 54880,
+		"coordinates" : {
+			"latitude" : "-42.6128",
+			"longitude" : "-18.5996"
+		},
+		"timezone" : {
+			"offset" : "+3:30",
+			"description" : "Tehran"
+		}
+	},
+	"email" : "elijah.lewis@example.com",
+	"login" : {
+		"uuid" : "2292b7c7-a9bf-4341-abbd-c5841444ab6e",
+		"username" : "angrygorilla267",
+		"password" : "toonarmy",
+		"salt" : "DUtMcvWR",
+		"md5" : "258eaa742373ee70976d53d1b84d4764",
+		"sha1" : "62f168f38fa3f6efbd815b58518775d3c6cf0080",
+		"sha256" : "a4ab496047b9de7df39adbdabfecc813b8da428087029c94c2b748cef092f85e"
+	},
+	"dob" : {
+		"date" : "1986-03-29T06:40:18Z",
+		"age" : 32
+	},
+	"registered" : {
+		"date" : "2007-12-24T10:32:11Z",
+		"age" : 10
+	},
+	"phone" : "(187)-486-3727",
+	"cell" : "(986)-974-0857",
+	"id" : {
+		"name" : "SSN",
+		"value" : "127-66-9786"
+	},
+	"picture" : {
+		"large" : "https://randomuser.me/api/portraits/men/57.jpg",
+		"medium" : "https://randomuser.me/api/portraits/med/men/57.jpg",
+		"thumbnail" : "https://randomuser.me/api/portraits/thumb/men/57.jpg"
+	},
+	"nat" : "US"
+}
+```
+
+Query with sorting
+```
+db.persons.find({}, {_id: 0, name: 1, dob: 1}).sort({ "dob.age": 1 })
+```
+
+Explain query
+```
+var exp = db.persons.explain('executionStats')
+exp.find({}, {_id: 0, name: 1, dob: 1}).sort({ "dob.age": 1 })
+```
+
+Create index for sorting
+```
+db.persons.dropIndexes()
+db.persons.createIndex({ "dob.age": 1 })
+db.persons.getIndexes()
+```
+
+Explain query again !!
