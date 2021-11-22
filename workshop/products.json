@@ -1,0 +1,3 @@
+{"_id":{"$oid":"619b6592ce950edda06355d6"},"name":"paper","price":10.0,"description":"A4 size papers"}
+{"_id":{"$oid":"619b7711a39a34a79c3669ef"},"name":"MongoDB book","price":100.0}
+{"_id":{"$oid":"619b7711a39a34a79c3669f0"},"name":"Design patterns","price":200.0}
