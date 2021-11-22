@@ -86,7 +86,7 @@ $db.products.update({_id:ObjectId("619b6592ce950edda06355d6")}, { message: "Hell
 ### Delete data
 Delete by id
 ```
-$db.products.deleteOne({_id: "xyz"})
+$db.products.deleteOne({_id: ObjectId("619b6592ce950edda06355d6")})
 ```
 
 Delete all docuement in collection
