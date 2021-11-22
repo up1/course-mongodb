@@ -188,3 +188,8 @@ db.userData.find({ "data" : "inactive" })
 ```
 
 ### [Indexes Strategies](https://docs.mongodb.com/manual/applications/indexes/)
+
+
+### Working with sorting data
+* Default :: sorting data in memory
+* Improve sorting data with indexes
