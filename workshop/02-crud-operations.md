@@ -1,7 +1,7 @@
 ## CRUD operations with MongoDB
 
 
-### Create data
+### Create data :: [Insert Many](https://docs.mongodb.com/manual/reference/method/db.collection.insertMany/)
 ```
 $db.products.insertOne({name:"paper",price:10, description:"A4 size papers"})
 
