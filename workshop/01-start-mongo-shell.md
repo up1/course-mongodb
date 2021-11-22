@@ -43,21 +43,6 @@ $db.products.find()
 $db.products.find().pretty()
 ```
 
-### Read data => Filter
-
-
-### Read data => Projection
-
-
-### Read data => Aggregate
-
-
-### Update data
-
-
-### Delete data
-
-
 ### Drop collection
 ```
 $db.products.drop()
