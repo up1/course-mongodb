@@ -4,7 +4,9 @@
 * [CRUD operations](https://github.com/up1/course-mongodb/blob/main/workshop/02-crud-operations.md)
 * [Aggregation pipeline](https://github.com/up1/course-mongodb/blob/main/workshop/03-aggregation.md)
 * [Indexing](https://github.com/up1/course-mongodb/blob/main/workshop/04-indexing.md)
+* [Basic authentication](https://github.com/up1/course-mongodb/tree/main/workshop/authentication)
 
 
 ## Resources
 * [SQL to MongoDB](https://docs.mongodb.com/manual/reference/sql-comparison/#sql-to-mongodb-mapping-chart)
+* [Optimize Query Performance](https://docs.mongodb.com/manual/tutorial/optimize-query-performance-with-indexes-and-projections/)
