@@ -51,6 +51,11 @@ $db.products.find().pretty()
 $db.products.drop()
 $db.dropDatabase()
 ```
+### Print field and data type
+```
+var schemaproduct = db.products.findOne()
+for (var key in schemaproduct) { print (key, typeof key) ; }
+```
 
 ### More information
 ```
