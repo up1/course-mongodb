@@ -9,3 +9,4 @@
 
 ## Resources
 * [SQL to MongoDB](https://docs.mongodb.com/manual/reference/sql-comparison/#sql-to-mongodb-mapping-chart)
+* [Optimize Query Performance](https://docs.mongodb.com/manual/tutorial/optimize-query-performance-with-indexes-and-projections/)
