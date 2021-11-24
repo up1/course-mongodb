@@ -10,7 +10,7 @@
 * Deployment
   * [Replication](https://github.com/up1/course-mongodb/blob/main/workshop/replication/01-simple/)
   * [Replication + Key file (internal communication)](https://github.com/up1/course-mongodb/blob/main/workshop/replication/02-keyfile/)
-  * [Sharded cluster]((https://github.com/up1/course-mongodb/blob/main/workshop/replication/03-sharding/))
+  * [Sharded cluster](https://github.com/up1/course-mongodb/blob/main/workshop/replication/03-sharding/)
 
 ## Resources
 * [SQL to MongoDB](https://docs.mongodb.com/manual/reference/sql-comparison/#sql-to-mongodb-mapping-chart)
