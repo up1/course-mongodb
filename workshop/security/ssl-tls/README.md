@@ -23,6 +23,11 @@ $openssl req -new -key mongodb.key -out mongodb.csr
 $openssl x509 -req -in mongodb.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out mongodb.crt -days 500 -sha256
 ```
 
+Create pem file
+```
+$cat mongodb.key mongodb.crt > mongodb.pem
+```
+
 ### 2. Start server with TLS
 ```
 $mkdir -p data/rs1
