@@ -32,7 +32,6 @@ $mongo -u demo01 -p demo01
 
 
 
-
 ## Reference Websites
 * [Connection String URI Format](https://docs.mongodb.com/manual/reference/connection-string/)
 
