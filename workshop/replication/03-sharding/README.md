@@ -113,3 +113,15 @@ $sh.shardCollection("<database>.<collection>", { <shard key field> : "hashed" } 
 // Range-based
 $sh.shardCollection("<database>.<collection>", { <shard key field> : 1, ... } )
 ```
+
+Example :: Access to mongos server (Router)
+```
+$sh.enableSharding("demo")
+$sh.shardCollection("demo.mycollection", {_id:1})
+
+use demo
+db.mycollection.insert({name: "Me"})
+db.mycollection.find()
+
+sh.status()
+```
