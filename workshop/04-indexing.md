@@ -274,6 +274,9 @@ db.persons.find({}, {_id: 0, name: 1, dob: 1}).sort({ "dob.age": 1 })
 
 Explain query
 ```
+db.persons.find({}, {_id: 0, name: 1, dob: 1}).sort({ "dob.age": 1 }).explain('executionStats')
+
+
 var exp = db.persons.explain('executionStats')
 exp.find({}, {_id: 0, name: 1, dob: 1}).sort({ "dob.age": 1 })
 ```
