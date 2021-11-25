@@ -7,7 +7,6 @@
 * Security
   * [Basic authentication](https://github.com/up1/course-mongodb/tree/main/workshop/authentication)
   * [TLS/SSL](https://github.com/up1/course-mongodb/tree/main/workshop/security/ssl-tls)
-  * Data encryption
 * Deployment
   * [Replication](https://github.com/up1/course-mongodb/blob/main/workshop/replication/01-simple/)
   * [Replication + Key file (internal communication)](https://github.com/up1/course-mongodb/blob/main/workshop/replication/02-keyfile/)
