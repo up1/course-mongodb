@@ -127,6 +127,8 @@ sh.status()
 
 Example of Hashed shard
 ```
+$sh.addShard( "demo04/localhost:27018")
+
 $sh.enableSharding("demo3")
 
 $sh.shardCollection(
