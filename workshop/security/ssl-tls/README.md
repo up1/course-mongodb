@@ -16,7 +16,7 @@ Common Name (e.g. server FQDN or YOUR name) []:Data
 Email Address []:xxx@xxx.com
 ```
 
-### Create A Certificat
+### Create A Certificated
 ```
 $openssl genrsa -out mongodb.key 2048
 $openssl req -new -key mongodb.key -out mongodb.csr
