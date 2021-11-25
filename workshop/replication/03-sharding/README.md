@@ -94,8 +94,6 @@ $sh.status()
 ### 4. Add Shards to the Cluster
 ```
 $sh.addShard( "demo03/localhost:27017")
-$sh.addShard( "demo03/localhost:27018")
-$sh.addShard( "demo03/localhost:27019")
 ```
 
 ### 5. Enable Sharding for a Database
