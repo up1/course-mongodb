@@ -1,6 +1,6 @@
 ## Secure your MongoDB connections - SSL/TLS
 
-### 1. Creating own SSL CA to dump our self-signed certificate
+### 1. Creating own SSL CA to dump our self-signed certificate (client)
 
 Create the private root key and self-sign certificate
 ```
@@ -16,7 +16,7 @@ Common Name (e.g. server FQDN or YOUR name) []:Data
 Email Address []:xxx@xxx.com
 ```
 
-### Create A Certificate 
+### Create A Certificat
 ```
 $openssl genrsa -out mongodb.key 2048
 $openssl req -new -key mongodb.key -out mongodb.csr
