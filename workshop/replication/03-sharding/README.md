@@ -123,3 +123,17 @@ db.mycollection.find()
 
 sh.status()
 ```
+
+
+Example of Hashed shard
+```
+$sh.enableSharding("demo3")
+
+$sh.shardCollection(
+  "demo3.xyz",
+  { "age" : "hashed" }
+)
+
+$use demo3
+$for (i=0; i<1000; i++) {db.xyz.insert({age: i})}
+```
