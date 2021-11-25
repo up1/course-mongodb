@@ -9,7 +9,7 @@ $mongod -f single.conf --auth
 
 Create a new user with Local Exception (on localhost only)
 ```
-$mongod
+$mongo
 $use admin
 $db.createUser({ user: "demo01", pwd: "demo01", roles: [{role: "userAdminAnyDatabase", db: "admin"}]})
 ```
