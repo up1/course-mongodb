@@ -1,4 +1,4 @@
-# List of workshop
+# List of workshops
 * [Basic installation](https://github.com/up1/course-mongodb/blob/main/workshop/00-start-single-instance.md)
 * [MongoDB shell](https://github.com/up1/course-mongodb/blob/main/workshop/01-start-mongo-shell.md)
 * [CRUD operations](https://github.com/up1/course-mongodb/blob/main/workshop/02-crud-operations.md)
